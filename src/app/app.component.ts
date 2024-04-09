@@ -20,14 +20,13 @@ export class AppComponent implements OnInit{
   }
 
   btnClick(name:string){
-    this.router.navigateByUrl("/"+name).then((r)=>{console.log("clicked")})
+    this.router.navigateByUrl("/"+name).then(()=>{console.log("clicked")})
   }
 
   ngOnInit(){
     initFlowbite()
   }
 
-  protected readonly Router = Router;
   protected readonly GlobalConstants = GlobalConstants;
 }
 
