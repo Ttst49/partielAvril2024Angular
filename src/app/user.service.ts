@@ -33,7 +33,9 @@ export class UserService {
       .subscribe({
         next(dataFromFetch:any){
           localStorage.setItem('bearerToken',dataFromFetch['token'])
-          console.log(localStorage)
+          GlobalConstants.user = {
+            "username":user.username
+          }
         }
       })
     this.router.navigateByUrl("home").then()
