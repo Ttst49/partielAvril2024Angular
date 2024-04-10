@@ -16,4 +16,6 @@ export class ProfileComponent {
       router.navigateByUrl("login").then()
     }
   }
+
+    protected readonly GlobalConstants = GlobalConstants;
 }
