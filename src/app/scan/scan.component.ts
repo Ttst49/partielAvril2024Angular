@@ -45,8 +45,9 @@ export class ScanComponent {
   addToCart(url:string){
     let n = url.lastIndexOf('/');
     let result = url.substring(n + 1);
-
     this.qrCodeService.addToCart(result)
+    GlobalConstants.cart.push({product:this.product,quantity:1})
+    this.router.navigateByUrl("cart").then()
   }
 
   check(){

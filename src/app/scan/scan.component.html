@@ -1,5 +1,6 @@
-<ng-container *ngIf="qrCodeData == undefined">
+<ng-container>
   <ngx-scanner-qrcode #action="scanner"></ngx-scanner-qrcode>
+
 
   <p *ngIf="action.isLoading">⌛ Loading...</p>
 
@@ -9,7 +10,6 @@
   </h1>
 
   <button (click)="action.isStart ? action.stop() : action.start()">Scan</button>
-  <button (click)="check()">COUCOU</button>
 
 </ng-container>
 
